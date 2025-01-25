@@ -6,3 +6,4 @@ defmodule Calculator do
 end
 
 IO.puts("A soma de 5 e 3 é: #{Calculator.add(5, 3)}")
+#so pra ver
