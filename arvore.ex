@@ -42,11 +42,12 @@ defmodule Arvore do
   # Imprimindo a árvore
   def imprimir(nil, _nivel), do: :ok
 
-  def imprimir(%Arvore{chave: chave, val: val, esquerdo: esquerdo, direito: direito, x: x, y: y}, nivel) do
-      IO.puts(String.duplicate("  ", nivel) <> "#{chave} (#{val}) - x: #{x}, y: #{y}")
-      if esquerdo != nil, do: imprimir(esquerdo, nivel + 1)
-      if direito != nil, do: imprimir(direito, nivel + 1)
-  end
+    def imprimir(%Arvore{chave: chave, val: val, esquerdo: esquerdo, direito: direito, x: x, y: y}, nivel) do
+        IO.puts("#{chave} (#{val}) - x: #{x}, y: #{y}")
+
+        if esquerdo != nil, do: imprimir(esquerdo, nivel + 1)
+        if direito != nil, do: imprimir(direito, nivel + 1)
+    end
 end
 
 defmodule Main do
