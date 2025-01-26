@@ -1,5 +1,5 @@
 defmodule Arvore do
-  # Definindo os campos da struct
+  # Definindo os campos da struct.
   defstruct chave: nil, val: nil, esquerdo: nil, direito: nil, x: nil, y: nil
 
   @scale 25  # Espaçamento entre os nós (definido no módulo)
